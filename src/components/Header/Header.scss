@@ -1,0 +1,23 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'SF Pro Display', sans-serif;
+
+  &>div{
+    margin: 7px 25px;
+  }
+
+  .time{
+    color: #FFFFFF;
+  }
+  
+  .information-about-phone{
+    display: flex;
+    gap: 5px;
+    
+    img{
+      width: 20px;
+    }
+  }
+}

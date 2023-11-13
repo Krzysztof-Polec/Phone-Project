@@ -1,0 +1,22 @@
+.home-screen{
+  height: 100%;
+  background-image: url("../../images/wallpaper.webp");
+  background-size: cover;
+
+  .home-screen-content{
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    justify-items: center;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+
+    a{
+      z-index: 15;
+    }
+
+    img{
+      width: 50px;
+    }
+  }
+}
