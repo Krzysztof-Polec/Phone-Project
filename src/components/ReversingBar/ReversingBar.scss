@@ -1,0 +1,17 @@
+.reversing-bar{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 80px;
+  bottom: 20px;
+  width: 200px;
+  height: 20px;
+  z-index: 15;
+    
+  div{
+    width: 200px;
+    height: 5px;
+    background-color: #8F8F8F;
+    border-radius: 5px;
+  }
+}
