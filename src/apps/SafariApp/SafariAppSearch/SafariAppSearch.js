@@ -1,4 +1,5 @@
 import { useState } from "react"
+require('dotenv').config();
 
 const SafariAppSearch = ({ onSeeMore }) => {
   const [query, setQuery] = useState("")
