@@ -1,5 +1,4 @@
 import { useState } from "react"
-import env from "react-dotenv"
 
 const SafariAppSearch = ({ onSeeMore }) => {
   const [query, setQuery] = useState("")
@@ -8,10 +7,10 @@ const SafariAppSearch = ({ onSeeMore }) => {
     if(query.trim() !== ""){
       try{
         // CREATE FILE .env AND TYPE REACT_APP_API_KEY="YOUR_KEY"
-        const apiKey = env.REACT_APP_API_KEY
+        const apiKey = process.env.REACT_APP_API_KEY
 
         // TYPE IN .env REACT_APP_CX="YOUR_CX"
-        const cx = env.REACT_APP_CX
+        const cx = process.env.REACT_APP_CX
 
         const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${encodeURIComponent(query)}`)
 
