@@ -7,9 +7,9 @@ const SafariAppSearch = ({ onSeeMore }) => {
     if(query.trim() !== ""){
       try{
         // TYPE YOUR API KEY
-        const apiKey = ""
+        const apiKey = process.env.API_KEY
         // TYPE YOUR CX
-        const cx = ""
+        const cx = process.env.CX
 
         const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${encodeURIComponent(query)}`)
 
