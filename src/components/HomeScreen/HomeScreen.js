@@ -15,10 +15,11 @@ import settingsIcon from "../../icons/settings.svg"
 import safariIcon from "../../icons/safari.svg"
 import weatherIcon from "../../icons/weather.svg"
 import mapsIcon from "../../icons/maps.svg"
+import SmoothScreenTransition from "../SmoothScreenTransition/SmoothScreenTransition"
 
 const HomeScreen = () => {
   return(
-    <div className="home-screen">
+    <SmoothScreenTransition className="home-screen">
       <Header></Header>
       <div className="home-screen-content">
         <Link to={"/kalkulator" }>
@@ -64,7 +65,7 @@ const HomeScreen = () => {
           <img src={mapsIcon} alt="maps"></img>
         </Link>
       </div>
-    </div>
+    </SmoothScreenTransition>
   )
 }
 

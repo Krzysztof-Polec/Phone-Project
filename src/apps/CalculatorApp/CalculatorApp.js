@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header"
 import ReversingBar from "../../components/ReversingBar/ReversingBar"
 import "./CalculatorApp.scss"
 import CalculatorButtons from "./CalculatorButtons/CalculatorButtons"
+import SmoothAppTransition from "../../components/SmoothScreenTransition/SmoothScreenTransition"
 
 const CalculatorApp = () => {
   const [value, setValue] = useState("0")
@@ -118,14 +119,14 @@ const CalculatorApp = () => {
   }
 
   return(
-    <div className="calculator-app app">
+    <SmoothAppTransition className="calculator-app app">
       <Header></Header>
       <div className="calculator-app-content">
         <div className="calculator-screen">{value}</div>
         <CalculatorButtons click={handleButtonPress} operator={operator}></CalculatorButtons>
       </div>
       <ReversingBar></ReversingBar>
-    </div>
+    </SmoothAppTransition>
   )
 }
 
