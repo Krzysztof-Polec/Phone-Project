@@ -35,7 +35,6 @@ const WeatherApp = () => {
     if(latitude !== null && longitude !== null){
       axios.get(apiUrl).then((response) => {
           setWeatherData(response.data)
-          console.log(response.data)
         }).catch((error) => {
           console.error("Błąd pobierania danych pogodowych:", error)
         })
