@@ -1,0 +1,24 @@
+.weather-app-main-info{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  color: #E3E3E3;
+  gap: 10px;
+  margin-top: 40px;
+
+  .location{
+    font-size: 20px;
+  }
+
+  .temperature{
+    font-size: 52px;
+  }
+
+  .description{
+    font-size: 18px;
+  }
+
+  .min-max-temperature{
+    font-size: 16px;
+  }
+}

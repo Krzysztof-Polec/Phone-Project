@@ -1,11 +1,12 @@
-.search-result{
-  overflow: hidden auto;
-  max-height: 577px;
+.hourly-weather-info{
   display: flex;
-  flex-direction: column;
-  gap: 7px;
+  background-color: #2A3354;
+  padding: 15px;
+  overflow: auto hidden;
   z-index: 15;
   position: relative;
+  margin: 20px;
+  border-radius: 10px;
 
   &::-webkit-scrollbar{
     width: 12px;
@@ -23,19 +24,9 @@
   }
 
   &>div{
-    border-top: 1px solid #24282B;
-    border-bottom: 1px solid #24282B;
-    background-color: #1F1F1F;
-    padding: 10px;
-    cursor: pointer;
-
-    h3{
-      color: #A1C2F8;
-    }
-
-    p{
-      color: #BDC0C5;
-      font-size: 14px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #E3E3E3;
   }
 }

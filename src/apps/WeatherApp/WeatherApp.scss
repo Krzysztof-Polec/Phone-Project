@@ -1,0 +1,25 @@
+.weather-app{
+  background-color: #303754;
+
+  .weather-app-content{
+    overflow-y: auto;
+    height: 626px;
+    position: relative;
+    z-index: 15;
+
+    &::-webkit-scrollbar{
+      width: 12px;
+    }
+    
+    &::-webkit-scrollbar-track{
+      background-color: transparent;
+    }
+      
+    &::-webkit-scrollbar-thumb{
+      border-radius: 100px;
+      border: 5px solid transparent;
+      background-clip: content-box;
+      background-color: #8F8F8F;
+    }
+  }
+}

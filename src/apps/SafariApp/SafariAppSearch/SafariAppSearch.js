@@ -1,4 +1,5 @@
 import { useState } from "react"
+import axios from "axios"
 
 const SafariAppSearch = ({ onSeeMore }) => {
   const [query, setQuery] = useState("")
@@ -12,13 +13,19 @@ const SafariAppSearch = ({ onSeeMore }) => {
         // TYPE IN .env REACT_APP_CX="YOUR_CX"
         const cx = process.env.REACT_APP_CX
 
-        const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${cx}&q=${encodeURIComponent(query)}`)
+        const response = await axios.get(`https://www.googleapis.com/customsearch/v1`,{
+          params: {
+            key: apiKey,
+            cx: cx,
+            q: encodeURIComponent(query),
+          }
+        })
 
-        if(!response.ok){
+        if(!response.status === 200){
           console.error('Nieudane zapytanie do API. Status:', response.status)
         }
 
-        const results = await response.json()
+        const results = response.data
         onSeeMore(results.items || [])
       }catch(error){
         console.error('Błąd podczas wyszukiwania:', error)

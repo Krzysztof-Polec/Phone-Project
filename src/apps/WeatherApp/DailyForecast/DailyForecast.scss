@@ -1,0 +1,31 @@
+.weather-daily-forecast{
+  background-color: #2A3354;
+  color: #E3E3E3;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px 0;
+
+  .weather-daily-forecast-header{
+    margin-left: 10px;
+    font-size: 14px;
+  }
+  
+  div>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #60677A;
+    padding: 0 20px;
+
+    &:last-of-type{
+      border-bottom: 2px solid #60677A;
+    }
+
+    span{
+      width: 50px;
+      height: 4px;
+      background-color: #60677A;
+      border-radius: 25px;
+    }
+  }
+}
