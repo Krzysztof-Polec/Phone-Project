@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/api/pogoda/*"
+  to = "https://api.weatherapi.com/:splat"
+  status = 200
+  headers = {Access-Control-Allow-Origin = "*"}
