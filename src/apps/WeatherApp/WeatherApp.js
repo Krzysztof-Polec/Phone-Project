@@ -30,7 +30,7 @@ const WeatherApp = () => {
 
   useEffect(() => {
     const apiKey = process.env.REACT_APP_WEATHER_API
-    const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${latitude},${longitude}&days=3&lang=pl`
+    const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${latitude},${longitude}&days=3&lang=pl`
 
     if(latitude !== null && longitude !== null){
       axios.get(apiUrl).then((response) => {
